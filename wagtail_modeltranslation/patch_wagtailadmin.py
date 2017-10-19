@@ -316,7 +316,7 @@ def _new_get_site_root_paths():
     return result
 
 
-def _new_relative_url(self, current_site):
+def _new_relative_url(self, current_site, *args, **kwargs):
     """
     Return the 'most appropriate' URL for this page taking into account the site we're currently on;
     a local URL if the site matches, or a fully qualified one otherwise.
@@ -332,7 +332,7 @@ def _new_relative_url(self, current_site):
 
 
 @property
-def _new_url(self):
+def _new_url(self, *args, **kwargs):
     """
     Return the 'most appropriate' URL for referring to this page from the pages we serve,
     within the Wagtail backend and actual website templates;
